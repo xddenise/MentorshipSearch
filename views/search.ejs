@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Search</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+  <div class='container'>
+		<div class="row">
+     <div class="col py-lg-5 px-lg-5 my-lg-4 mx-lg-4 bg-warning text-white">
+			 <h2>Search By Name</h2>
+			 <form action="/search/name" method="post">
+				 <label>Name</label><br>
+	       <input type="text" name="name" class="mb-lg-3"></input><br>
+	       <input type="submit" value="Search"></input>
+			 </form>
+		 </div>
+     <div class="col py-lg-5 px-lg-5 my-lg-4 mx-lg-4 bg-info text-white m-2">
+			 <h2>Search By Expertise</h2>
+			 <form action="/search/expertise" method='post'>
+				 <label>Please select at least one expertise.</label><br>
+				 <input type="checkbox" name="Java">Java</input>
+				 <input type="checkbox" name="Python">Python</input>
+				 <input type="checkbox" name="C++">C++</input>
+				 <input type="checkbox" name="C" class="mb-lg-3">C</input><br>
+	       <input type="submit" value="Search"></input>
+			 </form>
+		 </div>
+    </div>
+  </div>
+
+	<script src="/Users/denis/OneDrive/Desktop/BestBuyProject/index.js"></script>
+
+</body>
+</html>

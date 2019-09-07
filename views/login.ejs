@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+  <h1>Best</h1>
+  <h1>Buddy</h1>
+  <div>
+		<%- include('messages') %>
+    <form id="loginBox" action="/users/login" method="post">
+      <label>Email</label><br>
+      <input type="email"
+			       name="email"
+						 value= '<%= typeof email != 'undefined'? email:'' %>'>
+					 </input><br>
+      <label>Password</label><br>
+      <input type="password"
+			       name="password"
+						 value= '<%= typeof password != 'undefined'? password:'' %>'>
+					 </input><br>
+      <input type="submit" value="Login"></input>
+    </form>
+		<span>Don't have an account? =></span>
+		<a href="/users/register" class="btn btn-secondary btn-block m-2 p-1">Register</a>
+  </div>
+</body>
+</html>

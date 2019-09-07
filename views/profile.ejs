@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Profile</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <h4>Name: <%= user.name %></h4>
+    <h4>Email: <%= user.email %></h4>
+    <h4>Skills:
+			<% user.skills.forEach(function(skill){ %>
+				<%= skill + ", "; %>
+			<% }); %>
+		</h4><br>
+		<a href="/profile/edit" class="btn btn-secondary btn-block m-2 p-1">Edit your profile</a>
+    <a href="/profile/pw" class="btn btn-secondary btn-block m-2 p-1">Change your password</a>
+  </div>
+</body>
+</html>

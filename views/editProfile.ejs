@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Profile</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <form name= "editBox" action="/editProfile" method="post">
+      <label>Name</label>
+      <input type="text"
+             name="name"
+             value= '<%= user.name %>'>
+           </input><br>
+      <label>Email</label>
+      <input type="email"
+             name="email"
+             value= '<%= user.email %>'>
+           </input><br>
+      <label>Skills</label>
+      <% let skillz = ""; %>
+      <% user.skills.forEach(function(skill){ %>
+              <% skillz += skill + ", "; %>
+              <% }); %>
+      <% console.log(skillz); %>
+      <input type="text"
+             name="skills"
+             value= "<%= skillz %>">
+           </input><br>
+      <input type="submit" value="Change"></input>
+    </form><br>
+
+    <a href="/profile" class="btn btn-secondary btn-block m-2 p-1">Go back to profile</a>
+  </div>
+</body>
+</html>
